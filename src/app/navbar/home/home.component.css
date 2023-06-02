@@ -1,0 +1,44 @@
+
+.example-card {
+  max-width: 400px;
+}
+.mat-grid-list{
+  height: 100vh;
+}
+.blink {
+  animation: blinkMe 1s linear infinite;
+ }
+ @keyframes blinkMe {
+  0% {
+   opacity: 0;
+  }
+  50% {
+   opacity: 1;
+  }
+  100% {
+   opacity: 0;
+  }
+ }
+
+ #spin {
+  color:red;
+  font-size: 200px;
+  font-family: 'Play', sans-serif;
+}
+#spin:after {
+  content:"";
+  animation: spin 6s linear infinite;
+}
+@keyframes spin {
+  0% {content: " World";}
+  10% {content: " Universe";}
+  20% {content: " Everyone";}
+  30% {content: " You";}
+  40% {content: " World";}
+  50% {content: " Universe";}
+  60% {content: " Everyone";}
+  70% {content: " You";}
+  80% {content: " World";}
+  90% {content: " Universe";}
+  100% {content: " Everyone";}
+  }

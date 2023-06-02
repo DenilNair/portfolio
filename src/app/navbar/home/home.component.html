@@ -1,1 +1,30 @@
-<p>home works!</p>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Play&display=swap"
+  rel="stylesheet"
+/>
+<mat-grid-list cols="6" row="3" rowHeight="30vh">
+  <mat-grid-tile
+    *ngFor="let tile of tiles"
+       [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="tile.color"
+  >
+    <div *ngIf="tile.text == 'Pic'">
+      <img alt="Angular Logo" height="500px"  src="assets/profile.png" />
+    </div>
+    <div *ngIf="tile.text == 'Intro'">
+      <p class="blink"></p>
+      <h1>Hi, I am <span style ="color:red"> Denil </span></h1>
+      <h3 style="color:#999797"><b> Backend Developer</b></h3>
+       <button mat-raised-button color="warn" [routerLink]="['/contact']">Contact Me</button>
+        <button mat-raised-button color="warn" style="margin-left:5px"  (click)="downloadPdf()">Get CV</button>
+     <!-- <p>Hello <span id="spin"></span></p>-->
+    </div>
+
+    <div *ngIf="tile.text == 'Slideshow'">
+      <p class="blink"></p>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

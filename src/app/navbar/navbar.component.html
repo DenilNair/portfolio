@@ -1,9 +1,21 @@
 
-  <mat-toolbar style="background:primary" >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<mat-toolbar style="background:primary" >
   <img
     width="40"
     alt="Angular Logo"
     src="assets/doc_logo.jpg"
   />
-    <span>My Application</span>
+   <a href="/home" > Portfolio </a>
+<div class="spacer"></div>
+  <a mat-button [routerLink]="'/home'" >Portfolio</a>
+  <a mat-button [routerLink]="'/blog'" >Blogs</a>
+   <a mat-button [routerLink]="'/project'" >Projects</a>
+  <a mat-button [routerLink]="'/about'">About</a>
+  <a mat-button [routerLink]="'/contact'">Contact</a>
+
+   <a mat-button class="sociallink" href="https://www.linkedin.com/in/denil-nair-378012145/" target="_blank">LinkedIn</a>
+    <a mat-button class="sociallink"href="https://github.com/DenilNair" target="_blank">Github</a>
   </mat-toolbar>

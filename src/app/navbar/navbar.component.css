@@ -1,4 +1,31 @@
 .mat-toolbar {
-  background: #007bff;
-  color: #fff;
+  background: #ffffff;
+  color: rgb(2, 73, 197);
+  border-bottom: 1px solid rgb(149, 156, 255);
+  font-family: 'Play', sans-serif;
+font-family: 'Playfair Display', serif;
+text-decoration:none;
+font-weight: bold;
+
+}
+.spacer{
+  flex: 0.5 0.5 auto;
+}
+.mat-button{
+  color: white;
+  margin-right:20px;
+  font-family: 'Play', sans-serif;
+font-family: 'Playfair Display', serif;
+font-weight: bold;
+}
+a:visited{
+  color: rgb(2, 73, 197);font-weight: bold;
+}
+a{
+  text-decoration:none;
+  font-weight: bold;
+}
+.sociallink{
+  border: 1px solid rgb(121, 208, 255) !important;
+  margin-left:5px
 }

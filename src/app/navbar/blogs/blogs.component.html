@@ -1,0 +1,29 @@
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div
+    [fxFlex]="(100/4) + '%'"
+    fxFlex.xs="100%"
+    fxFlex.sm="33%"
+    *ngFor="let num of [1,2,3,4,5,6,7]"
+  >
+    <mat-card class="mat-elevation-z4">
+      <mat-card-header>
+        <mat-card-title>Card example {{num}}</mat-card-title>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+      />
+      <mat-card-content>
+        <p>
+          The code below is not working. I tried using the same styling for a button without a 'mat-raised-button' property and it works, so I think it is probably some issue with this.
+
+How do I add borders and border colours to mat-buttons?
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button href="https://medium.com/@denil007nair/deploy-docker-image-to-kubernetes-3f8c5c26dfdc" target="_blank">Read More....</a>
+
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
