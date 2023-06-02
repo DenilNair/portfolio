@@ -1,0 +1,36 @@
+[debug] [2023-06-02T11:59:08.205Z] ----------------------------------------------------------------------
+[debug] [2023-06-02T11:59:08.207Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-06-02T11:59:08.207Z] CLI Version:   12.3.0
+[debug] [2023-06-02T11:59:08.208Z] Platform:      win32
+[debug] [2023-06-02T11:59:08.208Z] Node Version:  v18.16.0
+[debug] [2023-06-02T11:59:08.209Z] Time:          Fri Jun 02 2023 17:29:08 GMT+0530 (India Standard Time)
+[debug] [2023-06-02T11:59:08.209Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-02T11:59:08.337Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-02T11:59:08.338Z] > authorizing via signed-in user (denil007nair@gmail.com)
+[debug] [2023-06-02T11:59:08.338Z] [iam] checking project portfolio-5b505 for permissions ["firebase.projects.get"]
+[debug] [2023-06-02T11:59:08.341Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-5b505:testIamPermissions [none]
+[debug] [2023-06-02T11:59:08.341Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-5b505:testIamPermissions x-goog-quota-user=projects/portfolio-5b505
+[debug] [2023-06-02T11:59:08.342Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-5b505:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-06-02T11:59:10.077Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-5b505:testIamPermissions 200
+[debug] [2023-06-02T11:59:10.078Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-5b505:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-06-02T11:59:10.079Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-5b505 [none]
+[debug] [2023-06-02T11:59:10.509Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-5b505 200
+[debug] [2023-06-02T11:59:10.510Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-5b505 {"projectId":"portfolio-5b505","projectNumber":"246470058972","displayName":"portfolio","name":"projects/portfolio-5b505","resources":{"hostingSite":"portfolio-5b505"},"state":"ACTIVE","etag":"1_815f186c-8555-4574-b784-1dd73c593c8c"}
+[info] 
+[info] === Serving from 'D:\angular\portfolio_Nahid'...
+[info] 
+[debug] [2023-06-02T11:59:10.517Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-5b505/sites 
+[debug] [2023-06-02T11:59:11.608Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-5b505/sites 200
+[debug] [2023-06-02T11:59:11.609Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-5b505/sites {"sites":[{"name":"projects/portfolio-5b505/sites/portfolio-5b505","defaultUrl":"https://portfolio-5b505.web.app","appId":"1:246470058972:web:e9222eab0990d08c9f2519","type":"DEFAULT_SITE"}]}
+[debug] [2023-06-02T11:59:11.609Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-5b505/webApps/1:246470058972:web:e9222eab0990d08c9f2519/config [none]
+[debug] [2023-06-02T11:59:12.906Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-5b505/webApps/1:246470058972:web:e9222eab0990d08c9f2519/config 200
+[debug] [2023-06-02T11:59:12.907Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-5b505/webApps/1:246470058972:web:e9222eab0990d08c9f2519/config {"projectId":"portfolio-5b505","appId":"1:246470058972:web:e9222eab0990d08c9f2519","storageBucket":"portfolio-5b505.appspot.com","apiKey":"AIzaSyAdTvos-9fCnsEdiZj1tNm2S10ZZI1fssM","authDomain":"portfolio-5b505.firebaseapp.com","messagingSenderId":"246470058972","measurementId":"G-9GXMXJ11P5"}
+[debug] [2023-06-02T11:59:12.915Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-5b505 [none]
+[debug] [2023-06-02T11:59:13.329Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-5b505 200
+[debug] [2023-06-02T11:59:13.329Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-5b505 {"projectId":"portfolio-5b505","projectNumber":"246470058972","displayName":"portfolio","name":"projects/portfolio-5b505","resources":{"hostingSite":"portfolio-5b505"},"state":"ACTIVE","etag":"1_815f186c-8555-4574-b784-1dd73c593c8c"}
+[debug] [2023-06-02T11:59:13.330Z] Specified "public" directory "portfolio-5b505" does not exist; Deploy to Hosting site "portfolio-5b505" may fail or be empty.
+[info] i  hosting[portfolio-5b505]: Serving hosting files from: portfolio-5b505 {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mportfolio-5b505\u001b[22m"}}
+[info] +  hosting[portfolio-5b505]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [02/Jun/2023:11:59:14 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [02/Jun/2023:11:59:14 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [02/Jun/2023:11:59:17 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [02/Jun/2023:11:59:17 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36\""}}
