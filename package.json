@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-nahid",
+  "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -21,7 +21,7 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
-    "file-saver": "^2.0.5",
+    "fileport-saver": "^2.0.5",
     "primeicons": "^6.0.1",
     "primeng": "^16.0.0-rc.2",
     "rxjs": "~7.8.0",
