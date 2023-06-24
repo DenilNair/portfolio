@@ -7,4 +7,30 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  shouldRun=true;
+  events: string[] = [];
+  opened: boolean=true;
+laptop:boolean=true;
+  constructor(){
+
+    if(window.screen.width<600){
+      console.log("mobile screen");
+      this.laptop=false;
+    }
+    else{
+      this.laptop=true;
+    }
+  }
+
+   onResize(event: any) {
+console.log(event);
+console.log(window.screen.width);
+if(window.screen.width<600){
+  console.log("mobile screen");
+this.laptop=false;
+}else{
+  console.log("laptop screen");
+  this.laptop=true;
+}
+  }
 }

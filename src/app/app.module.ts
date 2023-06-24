@@ -15,6 +15,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsComponent } from './navbar/contact/forms/forms.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import {
   FormBuilder,
   FormControl,
@@ -73,6 +74,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     RippleModule,
     ImageModule,
     FlexLayoutModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent],

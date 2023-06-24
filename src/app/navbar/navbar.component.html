@@ -1,8 +1,10 @@
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Play&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-<mat-toolbar style="background:primary" >
+<ng-template [ngIf]="laptop" [ngIfElse]="loading">
+<div>
+<mat-toolbar  style="background:primary" (window:resize)="onResize($event)">
   <img
     width="40"
     alt="Angular Logo"
@@ -10,7 +12,7 @@
   />
    <a href="/home" > Portfolio </a>
 <div class="spacer"></div>
-  <a mat-button [routerLink]="'/home'" >Portfolio</a>
+  <a  mat-button [routerLink]="'/home'" >Portfolio</a>
   <a mat-button [routerLink]="'/blog'" >Blogs</a>
    <a mat-button [routerLink]="'/project'" >Projects</a>
   <a mat-button [routerLink]="'/about'">About</a>
@@ -19,3 +21,41 @@
    <a mat-button class="sociallink" href="https://www.linkedin.com/in/denil-nair-378012145/" target="_blank">LinkedIn</a>
     <a mat-button class="sociallink"href="https://github.com/DenilNair" target="_blank">Github</a>
   </mat-toolbar>
+  </div>
+</ng-template>
+<ng-template #loading>
+
+  <mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+
+<mat-toolbar  style="background:primary" (window:resize)="onResize($event)">
+  <img
+    width="40"
+    alt="Angular Logo"
+    src="assets/doc_logo.jpg"
+  />
+<div class="spacer"></div>
+  <a  mat-button [routerLink]="'/home'" >Portfolio</a>
+  <a mat-button [routerLink]="'/blog'" >Blogs</a>
+   <a mat-button [routerLink]="'/project'" >Projects</a>
+  <a mat-button [routerLink]="'/about'">About</a>
+  <a mat-button [routerLink]="'/contact'">Contact</a>
+
+   <a mat-button class="sociallink" href="https://www.linkedin.com/in/denil-nair-378012145/" target="_blank">LinkedIn</a>
+    <a mat-button class="sociallink"href="https://github.com/DenilNair" target="_blank">Github</a>
+  </mat-toolbar>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
+    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+    <p>Events:</p>
+    <div class="example-events">
+      <div *ngFor="let e of events">{{e}}</div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+ </ng-template>
+
