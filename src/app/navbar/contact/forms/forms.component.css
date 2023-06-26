@@ -1,3 +1,9 @@
 .form-group{
   width: 70%;
 }
+body{
+  height: 100vh;
+}
+mat-grid-list{
+  height: 100vh;
+}

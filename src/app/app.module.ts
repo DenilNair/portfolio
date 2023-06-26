@@ -16,6 +16,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsComponent } from './navbar/contact/forms/forms.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 import {
   FormBuilder,
   FormControl,
@@ -26,7 +27,6 @@ import {
   FloatLabelType,
   MatFormFieldModule,
 } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
@@ -39,6 +39,14 @@ import { ImageModule } from 'primeng/image';
 import { BlogsComponent } from './navbar/blogs/blogs.component';
 import { ProjectsComponent } from './navbar/projects/projects.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { RouterModule, Routes }   from '@angular/router';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 @NgModule({
   declarations: [
@@ -74,7 +82,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     RippleModule,
     ImageModule,
     FlexLayoutModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatListModule,
+    RouterModule,
+    MatExpansionModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

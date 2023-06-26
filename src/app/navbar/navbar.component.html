@@ -1,61 +1,99 @@
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Play&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Play&family=Playfair+Display:wght@600&display=swap"
+  rel="stylesheet"
+/>
 <ng-template [ngIf]="laptop" [ngIfElse]="loading">
-<div>
-<mat-toolbar  style="background:primary" (window:resize)="onResize($event)">
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="assets/doc_logo.jpg"
-  />
-   <a href="/home" > Portfolio </a>
-<div class="spacer"></div>
-  <a  mat-button [routerLink]="'/home'" >Portfolio</a>
-  <a mat-button [routerLink]="'/blog'" >Blogs</a>
-   <a mat-button [routerLink]="'/project'" >Projects</a>
-  <a mat-button [routerLink]="'/about'">About</a>
-  <a mat-button [routerLink]="'/contact'">Contact</a>
+  <div>
+    <mat-toolbar style="background: primary" (window:resize)="onResize($event)">
+      <img width="40" alt="Angular Logo" src="assets/doc_logo.jpg" />
+      <a href="/home"> Portfolio </a>
+      <div class="spacer"></div>
+      <a mat-button [routerLink]="'/home'">Portfolio</a>
+      <a mat-button [routerLink]="'/blog'">Blogs</a>
+      <a mat-button [routerLink]="'/project'">Projects</a>
+      <a mat-button [routerLink]="'/about'">About</a>
+      <a mat-button [routerLink]="'/contact'">Contact</a>
 
-   <a mat-button class="sociallink" href="https://www.linkedin.com/in/denil-nair-378012145/" target="_blank">LinkedIn</a>
-    <a mat-button class="sociallink"href="https://github.com/DenilNair" target="_blank">Github</a>
-  </mat-toolbar>
+      <a
+        mat-button
+        class="sociallink"
+        href="https://www.linkedin.com/in/denil-nair-378012145/"
+        target="_blank"
+        >LinkedIn</a
+      >
+      <a
+        mat-button
+        class="sociallink"
+        href="https://github.com/DenilNair"
+        target="_blank"
+        >Github</a
+      >
+    </mat-toolbar>
   </div>
 </ng-template>
-<ng-template #loading>
+<ng-template #loading><mat-toolbar color="primary"  (window:resize)="onResize($event)">
+    <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span> My Portfolio</span>
+    <span class="toolbar-item-spacer"></span>
 
-  <mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
-               (closed)="events.push('close!')">
 
-<mat-toolbar  style="background:primary" (window:resize)="onResize($event)">
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="assets/doc_logo.jpg"
-  />
-<div class="spacer"></div>
-  <a  mat-button [routerLink]="'/home'" >Portfolio</a>
-  <a mat-button [routerLink]="'/blog'" >Blogs</a>
-   <a mat-button [routerLink]="'/project'" >Projects</a>
-  <a mat-button [routerLink]="'/about'">About</a>
-  <a mat-button [routerLink]="'/contact'">Contact</a>
+</mat-toolbar>
 
-   <a mat-button class="sociallink" href="https://www.linkedin.com/in/denil-nair-378012145/" target="_blank">LinkedIn</a>
-    <a mat-button class="sociallink"href="https://github.com/DenilNair" target="_blank">Github</a>
-  </mat-toolbar>
-  </mat-sidenav>
+<mat-sidenav-container class="app-container">
+    <mat-sidenav #sidenav mode="side" [class.mat-elevation-z4]="true" class="app-sidenav">
+        <mat-nav-list>
+            <mat-list-item routerLink="/home">
+               <span>Portfolio</span>
+            </mat-list-item>
+             <mat-list-item routerLink="/blog">
+                <span>Blogs</span>
+            </mat-list-item>
+             <mat-list-item routerLink="/project">
+                <span>Project</span>
+            </mat-list-item>
+             <mat-list-item routerLink="/about">
+                <span>About</span>
+            </mat-list-item>
 
-  <mat-sidenav-content>
-    <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
-    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
-    <p>Events:</p>
-    <div class="example-events">
-      <div *ngFor="let e of events">{{e}}</div>
-    </div>
-  </mat-sidenav-content>
+             <mat-list-item routerLink="/contact">
+             <span>Contacts</span>
+                <!--mat-icon>dashboard</mat-icon><span>LinkedIn</span-->
+            </mat-list-item>
+            <!--mat-expansion-panel [class.mat-elevation-z0]="true">
+                <mat-expansion-panel-header>
+                    Mobile Phone
+                </mat-expansion-panel-header>
+                <mat-nav-list>
+                    <a mat-list-item routerLink="#">
+                        <mat-icon>apple</mat-icon><span>Blogs</span>
+                    </a>
+                    <a mat-list-item routerLink="#">
+                        <mat-icon>android</mat-icon><span>Projects</span>
+                    </a>
+                </mat-nav-list>
+            </mat-expansion-panel>
+            <mat-expansion-panel [class.mat-elevation-z0]="true">
+                <mat-expansion-panel-header>
+                    Frameworks
+                </mat-expansion-panel-header>
+                <mat-nav-list>
+                    <a mat-list-item routerLink="#">Spring</a>
+                    <a mat-list-item routerLink="#">Hibernate</a>
+                    <a mat-list-item routerLink="#">Struts</a>
+                </mat-nav-list>
+            </mat-expansion-panel-->
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet>
+            <div class="app-sidenav-content">
+
+            </div>
+        </router-outlet>
+    </mat-sidenav-content>
 </mat-sidenav-container>
-
- </ng-template>
-
+</ng-template>
